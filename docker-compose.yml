@@ -1,0 +1,11 @@
+  version: "3.8"
+  services:
+    mysql-container:
+      image: postgres:12-alpine
+      volumes:
+        - ./data:/var/lib/postmysql
+      environment:
+        - MYSQL_RANDOM_ROOT_PASSWORD=yes
+        - MYSQL_DATABASE=app-db
+        - MYSQL_USER=user
+        - MYSQL_PASSWORD=1234
