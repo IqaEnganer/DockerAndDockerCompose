@@ -3,10 +3,10 @@
     postgress-sql:
       image: postgres:12-alpine
       ports:
-        - "4508:4508"
+        - "5432:5432"
       volumes:
-        - ./data:/var/lib/postmysql
+        - ./data:/var/lib/postgresmysql/data
       environment:
-        - MYSQL_DATABASE=app-db
-        - MYSQL_USER=user
-        - MYSQL_PASSWORD=1234
+        - POSTGRES_USER=user
+        - POSTGRES_PASSWORD=12345
+        - POSTGRES_DB=app
